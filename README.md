@@ -1,17 +1,93 @@
-# globo_fitness
+# Flutter App Example
 
-A new Flutter project.
+Cross-platform example app with Flutter and Dart.
 
-## Getting Started
+Platforms: Android, iOS, Linux, MACOS, WEB, Windows
 
-This project is a starting point for a Flutter application.
+Source course: https://app.pluralsight.com/library/courses/getting-started-flutter/table-of-contents
 
-A few resources to get you started if this is your first Flutter project:
+## Screens
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_1.png" width=30% height=30%>
+<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_2.png" width=30% height=30%>
+<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_3.png" width=30% height=30%>
+<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_4.png" width=30% height=30%>
+<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_5.png" width=30% height=30%>
+<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_6.png" width=30% height=30%>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter-dart-app-example
+## Topics
+
+Basic Widgets
+
+- MaterialApp
+- Scaffold
+- Container
+- Text
+- Center
+
+Widget tree
+
+Navigation
+- Named / Unnamed Routes
+- Navigation Stack
+
+Navigator
+- push()
+- pop()
+- pushNamed()
+
+Drawer & BottomNavigationBar
+- ListView, ListTile,
+- BottomNavigationBarltem, Icon
+
+Stateful Widgets and State
+- initState()
+- build()
+
+Null Safety
+- late
+- ?
+- ??
+
+Widgets 
+- Column, 
+- ToggleButtons, 
+- TextField,
+- TextEditingController,
+- SingleChildScrollView
+
+Packages
+- pubspec.yaml
+- http
+- get()
+- Uri
+
+async/await
+
+JSON
+
+Map
+
+Model classes
+
+Persisting data
+
+SharedPreferences
+
+Maps, Serialization and Deserialization
+
+Widgets
+- FloatingActionButton
+
+## Links
+- Install Flutter: https://docs.flutter.dev/get-started/install
+- Set up Visual Studio Code: https://docs.flutter.dev/get-started/editor?tab=vscode 
+- Free img: https://unsplash.com/
+- Flutter packages: https://pub.dev/
+- Online flutter adn dart console: https://dartpad.dev/?
+- Weather API: https://openweathermap.org/api
+
+## Useful Commands
+- $ flutter doctor
+- New Flutter Project (VSC): View > Comand Palette.. >  ">Flutter: New Project" 
+
