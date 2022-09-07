@@ -8,12 +8,7 @@ Source course: https://app.pluralsight.com/library/courses/getting-started-flutt
 
 ## Screens
 
-<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_1.png" width=30% height=30%>
-<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_2.png" width=30% height=30%>
-<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_3.png" width=30% height=30%>
-<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_4.png" width=30% height=30%>
-<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_5.png" width=30% height=30%>
-<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_6.png" width=30% height=30%>
+<img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_1.png" width=30% height=30%>   <img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_2.png" width=30% height=30%>   <img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_3.png" width=30% height=30%>   <img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_4.png" width=30% height=30%>   <img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_5.png" width=30% height=30%>   <img src="https://github.com/alessandroiori/flutter-dart-app-example/blob/main/readme_img/screen_6.png" width=30% height=30%>
 
 ## Topics
 
@@ -78,6 +73,7 @@ Maps, Serialization and Deserialization
 
 Widgets
 - FloatingActionButton
+- Dismissible
 
 ## Links
 - Install Flutter: https://docs.flutter.dev/get-started/install
