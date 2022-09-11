@@ -1,6 +1,7 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
+import 'package:rxdart/rxdart.dart';
 
 /*
 source: https://youtu.be/Yrq2llD2Ldw
@@ -12,6 +13,7 @@ class LocalNotificationService {
   LocalNotificationService();
 
   final _localNotificationService = FlutterLocalNotificationsPlugin();
+  final BehaviorSubject<String?> onNotificationClick = BehaviorSubject();
 
   Future<void> init() async {
     tz.initializeTimeZones();
@@ -73,12 +75,25 @@ class LocalNotificationService {
             UILocalNotificationDateInterpretation.absoluteTime);
   }
 
+  Future<void> showNotificationWithPayload(
+      {required int id,
+      required String title,
+      required String body,
+      required String payload}) async {
+    final deatails = await _notificationDetails();
+    await _localNotificationService.show(id, title, body, deatails,
+        payload: payload);
+  }
+
   void _onDidReceiveLocalNotification(
       int id, String? title, String? body, String? payload) {
-    print('id $id');
+    //print('id $id');
   }
 
   void onSelectNotification(String? payload) {
-    print(payload);
+    //print('AAAAA $payload');
+    if (payload != null && payload.isNotEmpty) {
+      onNotificationClick.add(payload);
+    }
   }
 }

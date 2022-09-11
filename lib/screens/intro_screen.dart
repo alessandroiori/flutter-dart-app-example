@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:globo_fitness/screens/notification_payload_screen.dart';
 import 'package:globo_fitness/services/local_notification_service.dart';
 import '../shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
@@ -18,6 +19,7 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   void initState() {
     service.init();
+    listenToNotification();
     super.initState();
   }
 
@@ -75,19 +77,39 @@ class _IntroScreenState extends State<IntroScreen> {
                   ElevatedButton(
                       onPressed: () async {
                         service.showScheduledNotification(
-                            id: 0,
+                            id: 1,
                             title: 'Notification Title',
                             body: 'Some boby',
                             seconds: 4);
                       },
                       child: const Text('Show Scheduled Notification')),
                   ElevatedButton(
-                      onPressed: () async {},
+                      onPressed: () async {
+                        service.showNotificationWithPayload(
+                            id: 2,
+                            title: 'Notification Title',
+                            body: 'Some boby',
+                            payload: 'Payload Navigation');
+                      },
                       child: const Text('Show Notification with Payload')),
                 ],
               ),
             ),
           ),
         ));
+  }
+
+  void listenToNotification() =>
+      service.onNotificationClick.stream.listen(onNotificationListener);
+
+  void onNotificationListener(String? payload) {
+    if (payload != null && payload.isNotEmpty) {
+      //print('payload $payload');
+
+      Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NotificationPayloadScreen(payload: payload))
+          );
+    }
   }
 }
