@@ -5,7 +5,8 @@ Cross-platform example app with Flutter and Dart.
 Platforms: Android, iOS, Linux, MACOS, WEB, Windows
 
 Source course: https://app.pluralsight.com/library/courses/getting-started-flutter/table-of-contents
-Notification source: https://youtu.be/Yrq2llD2Ldw
+
+Notifications source: https://youtu.be/Yrq2llD2Ldw
 
 
 ## Screens
@@ -76,6 +77,11 @@ Maps, Serialization and Deserialization
 Widgets
 - FloatingActionButton
 - Dismissible
+
+Notification:
+- Local Notification
+- Scheduled Notification
+- Payload Notification (Navigator)
 
 ## Links
 - Install Flutter: https://docs.flutter.dev/get-started/install
