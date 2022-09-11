@@ -17,7 +17,7 @@ class _IntroScreenState extends State<IntroScreen> {
 
   @override
   void initState() {
-    service.initialize();
+    service.init();
     super.initState();
   }
 
@@ -73,7 +73,13 @@ class _IntroScreenState extends State<IntroScreen> {
                       },
                       child: const Text('Show Local Notification')),
                   ElevatedButton(
-                      onPressed: () async {},
+                      onPressed: () async {
+                        service.showScheduledNotification(
+                            id: 0,
+                            title: 'Notification Title',
+                            body: 'Some boby',
+                            seconds: 4);
+                      },
                       child: const Text('Show Scheduled Notification')),
                   ElevatedButton(
                       onPressed: () async {},

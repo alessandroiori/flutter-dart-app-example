@@ -13,7 +13,8 @@ class LocalNotificationService {
 
   final _localNotificationService = FlutterLocalNotificationsPlugin();
 
-  Future<void> initialize() async {
+  Future<void> init() async {
+    tz.initializeTimeZones();
     // paste icons folder under GlOBO_FITNESS/android/app/main/res
     const AndroidInitializationSettings androidInitializationSettings =
         AndroidInitializationSettings('@drawable/ic_stat_android');
@@ -43,16 +44,33 @@ class LocalNotificationService {
     const IOSNotificationDetails iosNotificationDetails =
         IOSNotificationDetails();
 
-    return const NotificationDetails(android: androidNotificationDetails, iOS: iosNotificationDetails);
+    return const NotificationDetails(
+        android: androidNotificationDetails, iOS: iosNotificationDetails);
   }
 
-  Future<void> showNotification({
-    required int id, 
-    required String title, 
-    required String body
-  }) async {
+  Future<void> showNotification(
+      {required int id, required String title, required String body}) async {
     final deatails = await _notificationDetails();
     await _localNotificationService.show(id, title, body, deatails);
+  }
+
+  Future<void> showScheduledNotification({
+    required int id,
+    required String title,
+    required String body,
+    required int seconds,
+  }) async {
+    final deatails = await _notificationDetails();
+    await _localNotificationService.zonedSchedule(
+        id,
+        title,
+        body,
+        tz.TZDateTime.from(
+            DateTime.now().add(Duration(seconds: seconds)), tz.local),
+        deatails,
+        androidAllowWhileIdle: true,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime);
   }
 
   void _onDidReceiveLocalNotification(
