@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_function_literals_in_foreach_calls
 
 import 'package:flutter/material.dart';
 import '../data/sp_helper.dart';
